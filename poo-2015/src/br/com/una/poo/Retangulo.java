@@ -7,15 +7,18 @@ public class Retangulo {
 	private int largura;
 	private int altura;
 	
+	private static int instacias = 0;
+	
 	public Retangulo(int x, int y, int largura, int altura) {
 		this.x = x;
 		this.y = y;
 		this.largura = largura;
 		this.altura = altura;
+		instacias++;
 	}
 	
 	public String imprimir(){
-		return "Retângulo[x:"+getX()+",y:"+getY()+",largura:"+getLargura()+",altura:"+getAltura()+"]";
+		return "retângulo[x:"+getX()+",y:"+getY()+",largura:"+getLargura()+",altura:"+getAltura()+"]";
 	}
 
 	public int getX() {
@@ -48,6 +51,11 @@ public class Retangulo {
 
 	public void setAltura(int altura) {
 		this.altura = altura;
+	}
+
+	public static int instancias() {
+		
+		return instacias;
 	}
 	
 	
