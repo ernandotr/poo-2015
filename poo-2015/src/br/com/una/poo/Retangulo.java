@@ -7,14 +7,14 @@ public class Retangulo {
 	private int largura;
 	private int altura;
 	
-	private static int instacias = 0;
+	private static int instancias;
 	
 	public Retangulo(int x, int y, int largura, int altura) {
 		this.x = x;
 		this.y = y;
 		this.largura = largura;
 		this.altura = altura;
-		instacias++;
+		instancias++;
 	}
 	
 	public String imprimir(){
@@ -55,7 +55,15 @@ public class Retangulo {
 
 	public static int instancias() {
 		
-		return instacias;
+		return instancias;
+	}
+
+	public static void zeraInstancias() {
+		instancias = 0;		
+	}
+
+	public static Object igual(Retangulo r1, Retangulo r2) {
+		return (r1.getX() == r2.getX() && r1.getY() == r2.getY() && r1.getAltura() == r2.getAltura() && r1.getLargura() == r2.getLargura());
 	}
 	
 	
