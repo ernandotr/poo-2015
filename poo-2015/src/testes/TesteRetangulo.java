@@ -1,7 +1,9 @@
-package br.com.una.poo;
+package testes;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import figuras.Retangulo;
 
 public class TesteRetangulo {
 

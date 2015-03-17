@@ -1,4 +1,4 @@
-package br.com.una.poo;
+package figuras;
 
 public class Retangulo {
 
@@ -41,16 +41,8 @@ public class Retangulo {
 		return largura;
 	}
 
-	public void setLargura(int largura) {
-		this.largura = largura;
-	}
-
 	public int getAltura() {
 		return altura;
-	}
-
-	public void setAltura(int altura) {
-		this.altura = altura;
 	}
 
 	public static int instancias() {
