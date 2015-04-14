@@ -1,62 +1,32 @@
 package figuras;
 
-public class Retangulo {
+import java.awt.Graphics;
 
-	private int x;
-	private int y;
-	private int largura;
+public class Retangulo extends Figura{
+
 	private int altura;
-	
-	private static int instancias;
+	private int largura;
 	
 	public Retangulo(int x, int y, int largura, int altura) {
-		this.x = x;
-		this.y = y;
-		this.largura = largura;
+		super(x, y);
 		this.altura = altura;
-		instancias++;
-	}
-	
-	public String imprimir(){
-		return "retângulo[x:"+getX()+",y:"+getY()+",largura:"+getLargura()+",altura:"+getAltura()+"]";
+		this.largura = largura;
 	}
 
-	public int getX() {
-		return x;
-	}
-
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	public int getY() {
-		return y;
-	}
-
-	public void setY(int y) {
-		this.y = y;
-	}
-
-	public int getLargura() {
-		return largura;
+	public String imprime() {
+		return "retangulo[X:"+this.x+",Y:"+this.y+",l:"+this.largura+",a:"+this.altura+"]";
 	}
 
 	public int getAltura() {
 		return altura;
 	}
 
-	public static int instancias() {
-		
-		return instancias;
-	}
-
-	public static void zeraInstancias() {
-		instancias = 0;		
-	}
-
-	public static Object igual(Retangulo r1, Retangulo r2) {
-		return (r1.getX() == r2.getX() && r1.getY() == r2.getY() && r1.getAltura() == r2.getAltura() && r1.getLargura() == r2.getLargura());
+	public int getLargura() {
+		return largura;
 	}
 	
-	
+	@Override
+	public void desenha(Graphics g) {
+		g.drawRect(x, y, largura, altura);
+	}
 }
