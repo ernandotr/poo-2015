@@ -17,10 +17,10 @@ public class Mouse extends MouseAdapter{
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		super.mouseClicked(e);
-		
-		Figura f = new Retangulo(e.getX(), e.getY(), 100, 60);
-		this.areaDeDesenho.adicionaFigura(f);
+		areaDeDesenho.getFigura().setX(e.getX());
+		areaDeDesenho.getFigura().setY(e.getY());
+		//Figura f = new Retangulo(e.getX(), e.getY(), 100, 60);
+		this.areaDeDesenho.adicionaFigura(areaDeDesenho.getFigura());
 		areaDeDesenho.repaint();
-		System.out.println("Clicado!");
 	}
 }

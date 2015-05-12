@@ -7,12 +7,14 @@ import java.util.List;
 
 import javax.swing.JPanel;
 
-import figuras.Circulo;
 import figuras.Figura;
 
 public class AreaDeDesenho extends JPanel{
 
+	private static final long serialVersionUID = 1L;
 	private List<Figura> figuras = new ArrayList<Figura>();
+	
+	private Figura figura;
 	
 	public AreaDeDesenho() {
 		this.setPreferredSize(new Dimension(600, 400));
@@ -34,6 +36,14 @@ public class AreaDeDesenho extends JPanel{
 
 	public void adicionaFigura(Figura figura){
 		figuras.add(figura);
+	}
+
+	public Figura getFigura() {
+		return figura;
+	}
+
+	public void setFigura(Figura figura) {
+		this.figura = figura;
 	}
 	
 }

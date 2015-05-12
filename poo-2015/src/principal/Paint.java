@@ -1,10 +1,8 @@
 package principal;
 
-import javax.swing.JFrame;
+import java.awt.BorderLayout;
 
-import figuras.Circulo;
-import figuras.Figura;
-import figuras.Retangulo;
+import javax.swing.JFrame;
 
 public class Paint extends JFrame{
 
@@ -22,11 +20,15 @@ public class Paint extends JFrame{
 //		Figura fc = new Circulo(100, 300, 40);
 //		Figura fr = new Retangulo(200, 200, 200, 120);
 		//Figura []figuras = new Figura[]{fr,fc};
+				
+		//AreaDeDesenho areaDeDesenho = new AreaDeDesenho();
+		//areaDeDesenho.addMouseListener(new Mouse(areaDeDesenho));
 		
+		Painel painel = new Painel();
 		
-		AreaDeDesenho areaDeDesenho = new AreaDeDesenho();
-		areaDeDesenho.addMouseListener(new Mouse(areaDeDesenho));
-		this.setContentPane(areaDeDesenho);
+		//painel.add(areaDeDesenho, BorderLayout.CENTER);
+		
+		this.setContentPane(painel);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.pack();
 		this.setVisible(true);
