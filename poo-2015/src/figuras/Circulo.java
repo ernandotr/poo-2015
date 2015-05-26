@@ -5,6 +5,10 @@ import java.awt.Graphics;
 public class Circulo extends Figura{
 
 	private int raio = 0;
+	
+	public Circulo(){
+		this.raio = 50;
+	}
 
 	public Circulo(int x, int y, int raio) {
 		super(x, y);

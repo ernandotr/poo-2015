@@ -11,6 +11,8 @@ public class Figura {
 		this.x = x;
 		this.y = y;
 	}
+	
+	public Figura(){}
 
 	public void desenha(Graphics g) {
 		

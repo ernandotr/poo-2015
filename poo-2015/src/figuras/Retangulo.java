@@ -7,6 +7,8 @@ public class Retangulo extends Figura{
 	private int altura;
 	private int largura;
 	
+	public Retangulo(){}
+	
 	public Retangulo(int x, int y, int largura, int altura) {
 		super(x, y);
 		this.altura = altura;

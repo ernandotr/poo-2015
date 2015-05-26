@@ -22,6 +22,7 @@ public class TesteRetangulo {
 	}
 
 
+	@SuppressWarnings("unused")
 	@Test
 	public void testaHerança() {
 		Retangulo r = new Retangulo(31, 31, 40, 50);

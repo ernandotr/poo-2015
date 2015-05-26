@@ -14,14 +14,14 @@ public class AreaDeDesenho extends JPanel{
 	private static final long serialVersionUID = 1L;
 	private List<Figura> figuras = new ArrayList<Figura>();
 	
-	private Figura figura;
+	private  Figura figura;
 	
 	public AreaDeDesenho() {
 		this.setPreferredSize(new Dimension(600, 400));
 	}
 	
-	public AreaDeDesenho(Figura[] figuras){
-		//this.figuras = figuras; 
+	public AreaDeDesenho(Figura figura){
+		this.figura = figura;
 		this.setPreferredSize(new Dimension(600, 400));
 	}
 	
