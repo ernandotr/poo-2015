@@ -35,6 +35,9 @@ private Figura figura;
 		atualizaFigura(f);
 		this.figuras.add(f);
 	}
+	public void removeFigura(Figura f) {
+		this.figuras.remove(f);
+	}
 	
 	public void atualizaFigura(Figura f) {
 		this.figura = f;

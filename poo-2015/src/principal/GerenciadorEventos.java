@@ -30,16 +30,15 @@ public class GerenciadorEventos extends MouseAdapter {
 	public void mouseDragged(MouseEvent e) {
 		
 		super.mouseDragged(e);
-
+		this.area.removeFigura(this.area.getFigura());
 		this.area.setFigura(ferramenta.criaFigura(this.area.getFigura().getX(), this.area.getFigura().getY(), e.getX(), e.getY()));
+		area.adicionaFigura(this.area.getFigura());
 		this.area.repaint();
 	}
 	public void mouseReleased(MouseEvent e) {
 		super.mouseReleased(e);
-		
-			
 		this.area.setFigura(ferramenta.criaFigura(this.area.getFigura().getX(), this.area.getFigura().getY(), e.getX(), e.getY()));
-		//area.adicionaFigura(figura);
+		area.adicionaFigura(this.area.getFigura());
 		area.repaint();
 	}
 }

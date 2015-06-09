@@ -10,7 +10,9 @@ public class FerramentaRetangulo extends Ferramenta {
 	
 	@Override
 	public Figura criaFigura(int x, int y, int x2, int y2) {
-		return new Retangulo(x, y, x2, y2);
+		int dx = Math.abs(x2 - x);
+		int dy = Math.abs(y2 - y);
+		return new Retangulo(x, y, dx, dy);
 	}
 
 	@Override

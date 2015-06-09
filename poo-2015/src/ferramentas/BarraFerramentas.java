@@ -1,14 +1,17 @@
 package ferramentas;
 
 	import javax.swing.ButtonGroup;
-	import javax.swing.JToggleButton;
-	import javax.swing.JToolBar;
+import javax.swing.JButton;
+import javax.swing.JToggleButton;
+import javax.swing.JToolBar;
 
 	public class BarraFerramentas extends JToolBar {
 
 		private static final long serialVersionUID = -8402380230249599609L;
 		
 		ButtonGroup grupo;
+		
+		public JButton btExportar = new JButton("Exportar");
 		
 		private Ferramenta ferramenta;
 		
@@ -32,6 +35,7 @@ package ferramentas;
 			botao.addActionListener(ferramenta);
 			grupo.add(botao);
 			this.add(botao);
+			this.add(btExportar);
 			if (ferramenta.isFerramentaPadrao()) {
 				botao.getModel().setPressed(true);
 				this.ferramenta = ferramenta;
@@ -46,5 +50,5 @@ package ferramentas;
 		public void setFerramentaAtiva(Ferramenta ferramenta) {
 			this.ferramenta = ferramenta;
 		}
-
+		
 }
