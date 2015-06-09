@@ -1,6 +1,11 @@
 package principal;
 
+import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import ferramentas.BarraFerramentas;
 
 public class Paint extends JFrame{
 
@@ -12,10 +17,20 @@ public class Paint extends JFrame{
 	}
 
 	public Paint() {
-				
-		Painel painel = new Painel();
+		JPanel painelPrincipal = new JPanel();
+		painelPrincipal.setLayout(new BorderLayout());
 		
-		this.setContentPane(painel);
+		BarraFerramentas barraDeFerramentas = new BarraFerramentas(); 
+		painelPrincipal.add(barraDeFerramentas, BorderLayout.NORTH);
+		
+		AreaDeDesenho areaDeDesenho = new AreaDeDesenho();
+		painelPrincipal.add(areaDeDesenho, BorderLayout.CENTER);
+		
+		GerenciadorEventos gerenciador = new GerenciadorEventos(areaDeDesenho, barraDeFerramentas);
+		areaDeDesenho.addMouseListener(gerenciador);
+		areaDeDesenho.addMouseMotionListener(gerenciador);
+		
+		this.setContentPane(painelPrincipal);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.pack();
 		this.setVisible(true);

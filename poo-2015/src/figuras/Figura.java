@@ -11,13 +11,7 @@ public class Figura {
 		this.x = x;
 		this.y = y;
 	}
-	
-	public Figura(){}
 
-	public void desenha(Graphics g) {
-		
-	}
-	
 	public String imprime() {
 		return "figura[X:"+this.x+",Y:"+this.y+"]";
 	}
@@ -36,5 +30,9 @@ public class Figura {
 
 	public void setY(int y) {
 		this.y = y;
+	}
+	
+	public void desenha(Graphics g) {
+		
 	}
 }

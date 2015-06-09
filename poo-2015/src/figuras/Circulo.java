@@ -6,9 +6,6 @@ public class Circulo extends Figura{
 
 	private int raio = 0;
 	
-	public Circulo(){
-		this.raio = 50;
-	}
 
 	public Circulo(int x, int y, int raio) {
 		super(x, y);
@@ -25,7 +22,7 @@ public class Circulo extends Figura{
 
 	@Override
 	public void desenha(Graphics g) {
-		g.drawOval(x, y, raio*2, raio*2);
+		g.drawOval(x, y, raio, raio);
 	}
 	
 }
