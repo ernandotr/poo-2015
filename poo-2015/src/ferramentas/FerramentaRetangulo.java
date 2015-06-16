@@ -19,4 +19,8 @@ public class FerramentaRetangulo extends Ferramenta {
 	public String getNome() {
 		return "Retângulo";
 	}
+	@Override
+	public boolean isFerramentaPadrao() {
+		return true;
+	}
 }
